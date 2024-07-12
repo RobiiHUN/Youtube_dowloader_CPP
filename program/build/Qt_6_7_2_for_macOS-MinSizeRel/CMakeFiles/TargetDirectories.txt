@@ -1,0 +1,9 @@
+/Users/otvosrobert/Desktop/Youtube_dowloader_CPP/program/build/Qt_6_7_2_for_macOS-MinSizeRel/CMakeFiles/program.dir
+/Users/otvosrobert/Desktop/Youtube_dowloader_CPP/program/build/Qt_6_7_2_for_macOS-MinSizeRel/CMakeFiles/edit_cache.dir
+/Users/otvosrobert/Desktop/Youtube_dowloader_CPP/program/build/Qt_6_7_2_for_macOS-MinSizeRel/CMakeFiles/rebuild_cache.dir
+/Users/otvosrobert/Desktop/Youtube_dowloader_CPP/program/build/Qt_6_7_2_for_macOS-MinSizeRel/CMakeFiles/list_install_components.dir
+/Users/otvosrobert/Desktop/Youtube_dowloader_CPP/program/build/Qt_6_7_2_for_macOS-MinSizeRel/CMakeFiles/install.dir
+/Users/otvosrobert/Desktop/Youtube_dowloader_CPP/program/build/Qt_6_7_2_for_macOS-MinSizeRel/CMakeFiles/install/local.dir
+/Users/otvosrobert/Desktop/Youtube_dowloader_CPP/program/build/Qt_6_7_2_for_macOS-MinSizeRel/CMakeFiles/install/strip.dir
+/Users/otvosrobert/Desktop/Youtube_dowloader_CPP/program/build/Qt_6_7_2_for_macOS-MinSizeRel/CMakeFiles/program_autogen_timestamp_deps.dir
+/Users/otvosrobert/Desktop/Youtube_dowloader_CPP/program/build/Qt_6_7_2_for_macOS-MinSizeRel/CMakeFiles/program_autogen.dir

@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_program_FILE /Users/otvosrobert/Desktop/Youtube_dowloader_CPP/program/build/Qt_6_7_2_for_macOS-MinSizeRel/program.app/Contents/MacOS/program)
+set(__QT_DEPLOY_TARGET_program_TYPE EXECUTABLE)
