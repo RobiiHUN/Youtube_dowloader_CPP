@@ -1,5 +1,5 @@
 
 clear
-g++ -o program main.cpp cpp/*.cpp -Wall -Werror 
-./program
-rm program
+g++ -o prog main.cpp cpp/*.cpp -Wall -Werror 
+./prog
+rm prog
