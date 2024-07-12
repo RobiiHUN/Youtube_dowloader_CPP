@@ -4,7 +4,5 @@
 #include <cstdio>
 
 
-#include <bgfx/platform.h>
-#include <bgfx/bgfx.h>
 
 
