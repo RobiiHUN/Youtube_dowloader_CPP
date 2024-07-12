@@ -20,6 +20,8 @@ class Downloader {
 
         /* ---------------------------- DOWNLOAD PROCESS ---------------------------- */
         void download_video();
+        void convert_to_mp3();
+        void delete_video();
         
 };
 
