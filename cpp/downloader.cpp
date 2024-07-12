@@ -1,23 +1,41 @@
 #include "../headers/downloader.hpp"
     
     
+
+/* ---------------------------- DEFAULT SETTINNGS --------------------------- */
+void Downloader::basic_setup(){
+    video_file = "video_temp";
     
-    void download_video() {
-    // YouTube URL input
-    std::string url;
+}
+
+/* --------------------------- DEFAULT CONSTRUKTOR -------------------------- */
+Downloader::Downloader() {
+    basic_setup();
+
     std::cout << "YouTube URL: ";
-    std::getline(std::cin, url);
+    std::getline(std::cin, LINK);
+}
 
-    // Temporary file name for video
-    std::string video_file = "video_temp.mp4.webm"; 
+/* ------------------------ CONSTRUKTOR W PARAMETERS ------------------------ */
+
+Downloader::Downloader(std::string url) {
+    basic_setup();
+    LINK = url;
+}
 
 
-    // Command to download the video using yt-dlp
-    std::string download_command = "yt-dlp -o " + video_file + " " + url;
+/* ---------------------------- DOWNLOAD PROCESS ---------------------------- */
 
+void Downloader::download_video() {
+    // YouTube URL input
+        
+
+    std::string download_command = "yt-dlp -o " + video_file + " " + LINK;
     // Execute the download command
     std::cout << "Downloading video..." << std::endl;
+    
     int download_result = system(download_command.c_str());
+    
     if (download_result != 0) {
         std::cerr << "Failed to download video." << std::endl;
         return;

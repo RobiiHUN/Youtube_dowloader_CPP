@@ -2,7 +2,8 @@
 
 int main() {
 
-download_video();
+    Downloader downloader;
+    downloader.download_video();
 
 return 0;
 
