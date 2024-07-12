@@ -11,6 +11,7 @@
 void Downloader::basic_setup(){
     video_file = "video_temp";
     
+    
 }
 
 /* --------------------------- DEFAULT CONSTRUKTOR -------------------------- */
@@ -32,7 +33,6 @@ Downloader::Downloader(std::string url) {
 /* ---------------------------- DOWNLOAD PROCESS ---------------------------- */
 
 void Downloader::download_video() {
-    // YouTube URL input
         
 
     std::string download_command = "yt-dlp -o " + video_file + " " + LINK;
@@ -45,6 +45,25 @@ void Downloader::download_video() {
         std::cerr << "Failed to download video." << std::endl;
         return;
     }
+}
+
+std::string Downloader::get_video_title() {
+    std::string title_command = "yt-dlp --get-title " + LINK;
+    
+    
+    FILE* title_stream = popen(title_command.c_str(), "r");
+
+    if (!title_stream) {
+        std::cerr << "Failed to get video title." << std::endl;
+        return nullptr;
+    }
+    char title_buffer[256];
+    std::string title = "";
+    while (fgets(title_buffer, sizeof(title_buffer), title_stream) != NULL) {
+        title += title_buffer;
+    }
+    pclose(title_stream);
+    return title;
 }
 
 /* --------------------------- CONVERTING PROCESS --------------------------- */
@@ -75,4 +94,22 @@ void Downloader::delete_video() {
         return;
     }
     
+}
+
+/* --------------------------------- RENAME --------------------------------- */
+void Downloader::rename_file() {
+
+
+    std::string new_file_name = get_video_title() + ".mp3";
+    std::string old_file_name = video_file + ".mp3";
+
+    std::cout << "Renaming file from " << old_file_name << " to " << new_file_name << "..." << std::endl;
+
+    int result = std::rename(old_file_name.c_str(), new_file_name.c_str());
+    if (result != 0) {
+        std::perror("Failed to rename file");
+        return;
+    }
+
+    std::cout << "File successfully renamed to " << new_file_name << std::endl;
 }

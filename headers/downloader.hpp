@@ -20,8 +20,12 @@ class Downloader {
 
         /* ---------------------------- DOWNLOAD PROCESS ---------------------------- */
         void download_video();
+        std::string get_video_title();
         void convert_to_mp3();
         void delete_video();
+        void rename_file();
+
+        
         
 };
 
